@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Crop Recommendation System</title>
+  </head>
+  <style>
+    h1 {
+        color : mediumseagreen;
+        text-align: left;
+    }
+
+    .warning {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card {
+        margin-left: 410px;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .container {
+        font-weight: bold;
+        padding-bottom: 10px;
+        border-radius: 15px;
+        /* background-color: #555759; */
+        background-color: #ffffff;
+    }
+  </style>
+  <body style="background: #bcbbb8;">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Crop Recommendation System</a>
+        </div>
+      </nav>
+    <div class="container my-3 mt-3">
+        
+        <h4 class="text-success">Enter Soil Report:</h4>
+        <form action="/predict" method="POST">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <label for="Nitrogen">Nitrogen</label>
+                    <input type="number" id="Nitrogen" name="Nitrogen" placeholder="Enter " class="form-container">
+                </div>
+                <div class="col-md-4">
+                    <label for="Phosphorus">Phosphorus</label>
+                    <input type="number" id="Phosphorus" name="Phosphorus" placeholder="Enter " class="form-container">
+                </div>
+                <div class="col-md-4">
+                    <label for="Potassium">Potassium</label>
+                    <input type="number" id="Potassium" name="Potassium" placeholder="Enter" class="form-container">
+                </div>
+           
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <label for="Temperature">Temperature</label>
+                    <input type="number" id="Temperature" name="Temperature" placeholder="Enter in 'C" class="form-container">
+                </div>
+                <div class="col-md-4">
+                    <label for="pH">Potential of Hydrogen(pH)</label>
+                    <input type="number" id="pH" name="pH" placeholder="Enter" class="form-container">
+                </div>
+                <div class="col-md-4">
+                    <label for="Humidity">Humidity</label>
+                    <input type="number" id="Humidity" name="Humidity" placeholder="Enter in %" class="form-container">
+                </div>
+            </div>
+            <div class="row mt-4">       
+                <div class="col-md-4">
+                    <label for="Rainfall">Rainfall</label>
+                    <input type="number" id="Rainfall" name="Rainfall" placeholder="Enter in mm" class="form-container">
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <button type="'submit" class="btn btn-primary btn-lg">Get Recommendation</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
